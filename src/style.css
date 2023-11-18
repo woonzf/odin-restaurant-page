@@ -1,0 +1,167 @@
+/* FONT */
+@font-face {
+    /* Designed by Font Diner */
+    font-family: "Permanent Marker";
+    src: url(./fonts/PermanentMarker-Regular.ttf) format("TrueType");
+}
+
+@font-face {
+    /* Designed by Matt McInerney, Pablo Impallari, Rodrigo Fuenzalida */
+    font-family: "Raleway";
+    src: url(./fonts/Raleway-VariableFont_wght.ttf) format("TrueType");
+}
+
+/* GENERAL */
+:root {
+    --color-main: #fbbf24;
+    --color-header: #18181b;
+    --height-header: 10vh;
+}
+
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    border-radius: 10px;
+    display: flex;
+}
+
+/* HEADER AND FOOTER */
+.header,
+.footer {
+    background-color: var(--color-header);
+    color: white;
+    font-family: "Permanent Marker";
+
+    height: var(--height-header);
+    padding: 0 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HEADER */
+.header {
+    position: sticky;
+    top: 0;
+}
+
+#brand {
+    font-size: calc(var(--height-header) * 0.4);
+}
+
+.header ul {
+    display: flex;
+}
+
+.header li {
+    margin: 0 20px;
+    font-size: calc(var(--height-header) * 0.2);
+}
+
+.header li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+    font-size: calc(var(--height-header) * 0.2);
+    justify-content: space-evenly;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+#github img {
+    height: calc(var(--height-header) * 0.3);
+    padding: 0 5px;
+}
+
+#github a {
+    display: flex;
+    justify-content: center;
+}
+
+/* CONTENT */
+#content {
+    background-color: var(--color-main);
+    font-family: "Raleway";
+    padding: 50px 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+/* CONTENT-WELCOME */
+.content-welcome {
+    display: flex;
+    gap: 50px;
+}
+
+.content-welcome img {
+    height: 40vw;
+}
+
+.welcome-intro {
+    font-size: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.welcome-intro > div:first-of-type {
+    font-family: "Permanent Marker";
+    font-size: 36px;
+}
+
+.welcome-intro > div > div:last-of-type {
+    margin-top: 10px;
+}
+
+/* CONTENT-FOOD */
+.content-food {
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 100%;
+    padding: 20px 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-food > div:first-of-type {
+    display: flex;
+    gap: 20px;
+}
+
+.content-food > div:nth-of-type(2) {
+    font-size: 18px;
+}
+
+.content-food > div:last-of-type {
+    font-size: 24px;
+}
+
+.content-food img {
+    height: 15vw;
+}
