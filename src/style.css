@@ -1,12 +1,12 @@
 /* FONT */
 @font-face {
-    /* Designed by Font Diner */
+    /* From https://fonts.google.com/specimen/Permanent+Marker */
     font-family: "Permanent Marker";
     src: url(./fonts/PermanentMarker-Regular.ttf) format("TrueType");
 }
 
 @font-face {
-    /* Designed by Matt McInerney, Pablo Impallari, Rodrigo Fuenzalida */
+    /* From https://fonts.google.com/specimen/Raleway */
     font-family: "Raleway";
     src: url(./fonts/Raleway-VariableFont_wght.ttf) format("TrueType");
 }
