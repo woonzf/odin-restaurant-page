@@ -15,7 +15,7 @@
 :root {
     --color-main: #fbbf24;
     --color-header: #18181b;
-    --height-header: 10vh;
+    --height-header: 80px;
 }
 
 body,
@@ -30,7 +30,7 @@ li {
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--color-main);
 }
 
 img {
@@ -42,7 +42,7 @@ img {
 .header,
 .footer {
     background-color: var(--color-header);
-    color: white;
+    color: var(--color-main);
     font-family: "Permanent Marker";
 
     height: var(--height-header);
@@ -74,17 +74,18 @@ img {
 
 .header li:hover {
     cursor: pointer;
-    text-decoration: underline;
+    color: white;
 }
 
 /* FOOTER */
 .footer {
     font-size: calc(var(--height-header) * 0.2);
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 200px;
 }
 
 .footer a:hover {
-    text-decoration: underline;
+    color: white;
 }
 
 #github img {
@@ -106,39 +107,46 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
 }
 
-/* CONTENT-WELCOME */
-.content-welcome {
+/* WELCOME, INTRO AND NEWSLETTER*/
+.welcome,
+.intro,
+.newsletter {
     display: flex;
     gap: 50px;
 }
 
-.content-welcome img {
+/* WELCOME */
+.welcome img {
     height: 40vw;
 }
 
-.welcome-intro {
+/* INTRO AND NEWSLETTER */
+.intro,
+.newsletter {
     font-size: 24px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 50px;
 }
 
-.welcome-intro > div:first-of-type {
+.intro > div:first-of-type,
+.newsletter > div > div:first-of-type {
     font-family: "Permanent Marker";
     font-size: 36px;
 }
 
-.welcome-intro > div > div:last-of-type {
+/* INTRO */
+.intro {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro > div > div:last-of-type {
     margin-top: 10px;
 }
 
-/* CONTENT-FOOD */
-.content-food {
+/* FOOD */
+.food {
     background-color: rgb(255, 255, 255, 0.8);
     width: 100%;
     padding: 20px 100px;
@@ -149,19 +157,118 @@ img {
     gap: 20px;
 }
 
-.content-food > div:first-of-type {
+.food > div:first-of-type {
     display: flex;
     gap: 20px;
 }
 
-.content-food > div:nth-of-type(2) {
+.food > div:nth-of-type(2) {
     font-size: 18px;
 }
 
-.content-food > div:last-of-type {
+.food > div:last-of-type {
     font-size: 24px;
 }
 
-.content-food img {
+.food img {
     height: 15vw;
+}
+
+/* NEWSLETTER */
+.newsletter {
+    align-items: center;
+}
+
+.newsletter img {
+    height: 20vw;
+}
+
+.newsletter > div > div:nth-of-type(2),
+.newsletter form {
+    margin-top: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#email {
+    height: 2rem;
+    width: 100%;
+    padding-top: 0.1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-indent: 1rem;
+}
+
+#email:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--color-header);
+}
+
+#sign-up-wrapper {
+    height: 3rem;
+}
+
+#sign-up {
+    background-color: var(--color-header);
+    color: var(--color-main);
+    font-family: "Permanent Marker";
+    height: 3rem;
+    width: 6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#sign-up:disabled {
+    background-color: grey;
+    color: silver;
+}
+
+#sign-up:enabled:hover {
+    color: white;
+}
+
+#sign-up:enabled:active {
+    height: 2.9rem;
+    width: 5.9rem;
+}
+
+/* EMAIL VALIDATION */
+#email + span {
+    position: relative;
+}
+
+#email + span::before {
+    width: 100%;
+    font-size: 1.2rem;
+
+    position: absolute;
+    top: calc(-20px - 1.2rem);
+    left: calc(100% + 1rem);
+}
+
+.invalid + span::before {
+    content: "✖ Invalid email address";
+    color: red;
+}
+
+.valid + span::before {
+    content: "✓";
+    color: green;
+}
+
+/* SIGN UP SUCCESS */
+#sign-up + span::before {
+    font-size: 1.2rem;
+}
+
+.success + span::before {
+    content: "✓ Success!";
+    color: green;
 }
