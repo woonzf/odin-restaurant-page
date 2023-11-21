@@ -1,154 +1,30 @@
 // CSS
 import './style.css';
 
-// Images
-import imgWelcome from './images/pexels-igor-starkov-914388.jpg';
-import imgFood1 from './images/pexels-j-a-n-n-g-u-y-e-n-🍁-2664216.jpg';
-import imgFood2 from './images/pexels-mister-mister-3490368.jpg';
-import imgFood3 from './images/pexels-pixabay-461198.jpg';
-import imgNewsletter from './images/pexels-andrea-piacquadio-842548.jpg';
+// Functions
+import { headerFooter } from './header-footer';
+import { home } from './home';
 
 const page = (() => {
     // Cache DOM
+    const body = document.querySelector("body");
     const content = document.querySelector("#content");
 
     function init() {
-        home.create(content);
+        renderHeaderFooter();
+        renderHome();
+    }
+
+    function renderHeaderFooter() {
+        body.prepend(headerFooter.createHeader(), content);
+        body.append(headerFooter.createFooter());
+    }
+
+    function renderHome() {
+        content.append(home.createWelcome(), home.createFood(), home.createNewsletter());
     }
 
     return { init };
-})()
-
-const home = (() => {
-    function create(content) {
-        createWelcome(content);
-        createFood(content);
-        createNewsletter(content);
-    }
-
-    function createWelcome(content) {
-        const image = createImg(imgWelcome, "Restaurant Table and Chairs");
-        const div1 = createDiv("Welcome to Soul Kitchen");
-
-        const div21 = createDiv("Founded in 2003 by Mr John Von Jobi.");
-        const div22 = createDiv("Its name took inspiration from the quote");
-        const span22 = createSpan(` "food for the soul".`); // Add CSS italic
-        div22.append(span22);
-
-        const div23 = createDiv("We strive to provide healthy and authentic food for you.");
-        const div24 = createDiv("Always."); // Add CSS italic
-
-        const div2 = createClassDivAndAppend(null, div21, div22, div23, div24);
-        const intro = createClassDivAndAppend("intro", div1, div2);
-        const welcome = createClassDivAndAppend("welcome", image, intro);
-        content.append(welcome);
-    }
-
-    function createFood(content) {
-        const image1 = createImg(imgFood1, "Noodles With Meat And Mint On Top");
-        const image2 = createImg(imgFood2, "Cooked Dish on Plate");
-        const image3 = createImg(imgFood3, "Close-up Photo of a Burrito");
-
-        const div1 = createClassDivAndAppend(null, image1, image2, image3);
-        const div2 = createDiv("... and more!");
-        const div3 = createDiv("We serve different kinds of food!");
-
-        const food = createClassDivAndAppend("food", div1, div2, div3);
-        content.append(food);
-    }
-
-    function createNewsletter(content) {
-        const image = createImg(imgNewsletter, "Man Holding Mug in Front of Laptop");
-        const div1 = createDiv("Interested?");
-        const div2 = createDiv("Sign up for our newsletter today!");
-
-        // Email input
-        const email = document.createElement("input");
-        email.type = "email";
-        email.id = "email";
-        email.name = "email";
-        email.placeholder = "username@email.com";
-        email.autocomplete = "off";
-
-        email.addEventListener("input", (e) => {
-            const target = e.target;
-        
-            if (validateEmail(email.value)) {
-                target.classList.remove("invalid");
-                target.classList.add("valid");
-                btnSignUp.disabled = false;
-            } else {
-                target.classList.remove("valid");
-                target.classList.add("invalid");
-                btnSignUp.disabled = true;
-                btnSignUp.classList.remove("success");
-            }
-        })
-
-        const spanEmail = createSpan(null);
-
-        // Sign up button
-        const btnSignUp = document.createElement("button");
-        btnSignUp.type = "button";
-        btnSignUp.id = "sign-up";
-        btnSignUp.disabled = true;
-        btnSignUp.textContent = "Sign Up";
-
-        btnSignUp.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.target.classList.add("success");
-        })
-        
-        const spanBtn = createSpan(null);
-
-        const divBtn = document.createElement("div");
-        divBtn.id = "sign-up-wrapper";
-        divBtn.append(btnSignUp, spanBtn);
-
-        // Form
-        const form = document.createElement("form");
-        form.action = "#";
-        form.method = "post";
-        form.append(email, spanEmail, divBtn);
-
-        const div = createClassDivAndAppend(null, div1, div2, form);
-        const newsletter = createClassDivAndAppend("newsletter", image, div);
-        content.append(newsletter);
-    }
-
-    function createImg(src, alt) {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = alt;
-        return img;
-    }
-
-    function createDiv(text) {
-        const div = document.createElement("div");
-        div.textContent = text;
-        return div;
-    }
-
-    function createSpan(text) {
-        const span = document.createElement("span");
-        if (text !== null) span.textContent = text;
-        return span;
-    }
-
-    function createClassDivAndAppend(className, ...elements) {
-        const div = document.createElement("div");
-        if (className !== null) div.classList.add(className);
-        div.append(...elements);
-        return div;
-    }
-
-    // From https://www.w3resource.com/javascript/form/email-validation.php
-    function validateEmail(mail) {
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) return true;
-        else return false;
-    }
-
-    return { create };
 })()
 
 page.init();
