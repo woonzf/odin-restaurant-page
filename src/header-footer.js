@@ -11,8 +11,13 @@ const headerFooter = (() => {
         div1.textContent = "Soul Kitchen";
 
         const li1 = createLi("HOME");
+        li1.id = "home";
+
         const li2 = createLi("MENU");
+        li2.id = "menu";
+
         const li3 = createLi("CONTACT");
+        li3.id = "contact";
 
         const ul = document.createElement("ul");
         ul.append(li1, li2, li3);
