@@ -1,0 +1,44 @@
+.menu {
+    box-sizing: border-box;
+    background-color: var(--color-food);
+    width: 80%;
+    padding: 20px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: "Permanent Marker";
+    font-size: 24px;
+}
+
+.divider {
+    width: 5rem;
+    border-bottom: 2px solid black;
+}
+
+.list,
+.list-less {
+    margin-top: 30px;
+    display: grid;
+    gap: 20px;
+}
+
+.list-less {
+    grid-template-columns: 1fr 1fr;
+}
+
+.item {
+    text-align: center;
+    font-size: 18px;
+}
+
+.item > div:first-of-type {
+    font-weight: bold;
+}
+
+.item > div:nth-of-type(2) {
+    margin-top: 5px;
+}

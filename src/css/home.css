@@ -1,15 +1,3 @@
-/* CONTENT */
-#content {
-    background-color: var(--color-main);
-    font-family: "Raleway";
-    padding: 50px 100px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-}
-
 /* WELCOME, INTRO AND NEWSLETTER*/
 .welcome,
 .intro,
@@ -52,7 +40,7 @@
 
 /* FOOD */
 .food {
-    background-color: rgb(255, 255, 255, 0.8);
+    background-color: var(--color-food);
     width: 100%;
     padding: 20px 100px;
 
