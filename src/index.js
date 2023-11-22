@@ -1,9 +1,11 @@
 // CSS
-import './style.css';
+import './css/style.css';
+import './css/header-footer.css';
+import './css/home.css';
 
 // Functions
-import { headerFooter } from './header-footer';
-import { home } from './home';
+import { headerFooter } from './js/header-footer';
+import { home } from './js/home';
 
 const page = (() => {
     const content = document.querySelector("#content");

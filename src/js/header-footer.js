@@ -2,7 +2,7 @@
 import { createImg, createDiv, createClassDivAndAppend } from "./function";
 
 // Images
-import imageGitHub from './images/github-mark-white.png';
+import imageGitHub from '../images/github-mark-white.png';
 
 const headerFooter = (() => {
     function createHeader() {

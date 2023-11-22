@@ -2,11 +2,11 @@
 import { createImg, createDiv, createClassDivAndAppend } from './function';
 
 // Images
-import imgWelcome from './images/pexels-igor-starkov-914388.jpg';
-import imgFood1 from './images/pexels-j-a-n-n-g-u-y-e-n-🍁-2664216.jpg';
-import imgFood2 from './images/pexels-mister-mister-3490368.jpg';
-import imgFood3 from './images/pexels-pixabay-461198.jpg';
-import imgNewsletter from './images/pexels-andrea-piacquadio-842548.jpg';
+import imgWelcome from '../images/pexels-igor-starkov-914388.jpg';
+import imgFood1 from '../images/pexels-j-a-n-n-g-u-y-e-n-🍁-2664216.jpg';
+import imgFood2 from '../images/pexels-mister-mister-3490368.jpg';
+import imgFood3 from '../images/pexels-pixabay-461198.jpg';
+import imgNewsletter from '../images/pexels-andrea-piacquadio-842548.jpg';
 
 const home = (() => {
     function createWelcome() {

@@ -1,0 +1,59 @@
+/* HEADER AND FOOTER */
+.header,
+.footer {
+    background-color: var(--color-header);
+    color: var(--color-main);
+    font-family: "Permanent Marker";
+
+    height: var(--height-header);
+    padding: 0 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HEADER */
+.header {
+    position: sticky;
+    top: 0;
+}
+
+#brand {
+    font-size: calc(var(--height-header) * 0.4);
+}
+
+.header ul {
+    display: flex;
+}
+
+.header li {
+    margin: 0 20px;
+    font-size: calc(var(--height-header) * 0.2);
+}
+
+.header li:hover {
+    cursor: pointer;
+    color: white;
+}
+
+/* FOOTER */
+.footer {
+    font-size: calc(var(--height-header) * 0.2);
+    justify-content: center;
+    gap: 200px;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+#github img {
+    height: calc(var(--height-header) * 0.3);
+    padding: 0 5px;
+}
+
+#github a {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,39 @@
+/* FONT */
+@font-face {
+    /* From https://fonts.google.com/specimen/Permanent+Marker */
+    font-family: "Permanent Marker";
+    src: url(./fonts/PermanentMarker-Regular.ttf) format("TrueType");
+}
+
+@font-face {
+    /* From https://fonts.google.com/specimen/Raleway */
+    font-family: "Raleway";
+    src: url(./fonts/Raleway-VariableFont_wght.ttf) format("TrueType");
+}
+
+/* GENERAL */
+:root {
+    --color-main: #fbbf24;
+    --color-header: #18181b;
+    --height-header: 80px;
+}
+
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-main);
+}
+
+img {
+    border-radius: 10px;
+    display: flex;
+}
