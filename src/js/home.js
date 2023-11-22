@@ -9,6 +9,10 @@ import imgFood3 from '../images/pexels-pixabay-461198.jpg';
 import imgNewsletter from '../images/pexels-andrea-piacquadio-842548.jpg';
 
 const home = (() => {
+    function createContent() {
+        return [createWelcome(), createFood(), createNewsletter()];
+    }
+
     function createWelcome() {
         const image = createImg(imgWelcome, "Restaurant Table and Chairs");
         const div1 = createDiv("Welcome to Soul Kitchen");
@@ -107,7 +111,7 @@ const home = (() => {
         else return false;
     }
 
-    return { createWelcome, createFood, createNewsletter };
+    return { createContent };
 })()
 
 export { home };

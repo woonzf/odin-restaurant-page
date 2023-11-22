@@ -2,13 +2,13 @@
 @font-face {
     /* From https://fonts.google.com/specimen/Permanent+Marker */
     font-family: "Permanent Marker";
-    src: url(./fonts/PermanentMarker-Regular.ttf) format("TrueType");
+    src: url(../fonts/PermanentMarker-Regular.ttf) format("TrueType");
 }
 
 @font-face {
     /* From https://fonts.google.com/specimen/Raleway */
     font-family: "Raleway";
-    src: url(./fonts/Raleway-VariableFont_wght.ttf) format("TrueType");
+    src: url(../fonts/Raleway-Regular.ttf) format("TrueType");
 }
 
 /* GENERAL */

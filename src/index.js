@@ -31,7 +31,7 @@ const page = (() => {
 
     function renderHome() {
         clearContent();
-        content.append(home.createWelcome(), home.createFood(), home.createNewsletter());
+        for (const item of home.createContent()) content.append(item);
     }
 
     function renderMenu() {
