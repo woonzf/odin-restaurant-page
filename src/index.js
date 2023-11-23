@@ -3,18 +3,21 @@ import './css/style.css';
 import './css/header-footer.css';
 import './css/home.css';
 import './css/menu.css';
+import './css/contact.css';
 
 // Functions
 import { headerFooter } from './js/header-footer';
 import { home } from './js/home';
 import { menu } from './js/menu';
+import { contact } from './js/contact';
 
 const page = (() => {
     const content = document.querySelector("#content");
 
     function init() {
-        renderHeaderFooter();
-        renderMenu();
+        const body = document.querySelector("body");
+        body.prepend(headerFooter.createHeader(), content);
+        body.append(headerFooter.createFooter());
 
         const liHome = document.querySelector("#home");
         const liMenu = document.querySelector("#menu");
@@ -23,12 +26,8 @@ const page = (() => {
         liHome.onclick = renderHome;
         liMenu.onclick = renderMenu;
         liContact.onclick = renderContact;
-    }
 
-    function renderHeaderFooter() {
-        const body = document.querySelector("body");
-        body.prepend(headerFooter.createHeader(), content);
-        body.append(headerFooter.createFooter());
+        renderHome();
     }
 
     function renderHome() {
@@ -45,7 +44,7 @@ const page = (() => {
 
     function renderContact() {
         clearContent();
-        console.log("CONTACT")
+        render(contact.createContent());
         scrollToTop();
     }
 

@@ -1,17 +1,18 @@
 // Functions
-import { createDiv, createClassDivAndAppend } from "./function";
+import { createText, createClassDivAndAppend } from "./function";
 
 const menu = (() => {
     const month = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
 
     function createContent() {
-        return [createMonth(), createAppetizer(), createMainCourse(), createDessert()];
+        return [createMonth(), createAppetizer(), createMainCourse(),
+            createDessert(), createMessage()];
     }
 
     function createMonth() {
         const date = new Date();
-        const monthYear = createDiv(`${month[date.getMonth()]} ${date.getFullYear()}`);
+        const monthYear = createText(`${month[date.getMonth()]} ${date.getFullYear()}`);
         monthYear.classList.add("month-year");
         return monthYear;
     }
@@ -49,16 +50,20 @@ const menu = (() => {
         return createClassDivAndAppend("menu", title, createDivider(), list);
     }
 
+    function createMessage() {
+        return createClassDivAndAppend("message", "New menu, every month!");
+    }
+
     function createItem(name, desc) {
-        const itemName = createDiv(name);
+        const itemName = createText(name);
         if (desc !== null) {
-            return createClassDivAndAppend("item", itemName, createDiv(desc));
+            return createClassDivAndAppend("item", itemName, createText(desc));
         }
         return createClassDivAndAppend("item", itemName);
     }
 
     function createClassTitle(text) {
-        const title = createDiv(text);
+        const title = createText(text);
         title.classList.add("title");
         return title;
     }

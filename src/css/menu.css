@@ -1,5 +1,6 @@
 .month-year,
-.title {
+.title,
+.message {
     font-family: "Permanent Marker";
 }
 
@@ -18,7 +19,8 @@
     align-items: center;
 }
 
-.title {
+.title,
+.message {
     font-size: 24px;
 }
 
@@ -27,8 +29,8 @@
     border-bottom: 2px solid black;
 }
 
-.list,
-.list-less {
+.menu .list,
+.menu .list-less {
     margin-top: 30px;
     display: grid;
     gap: 20px;
@@ -38,15 +40,15 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.item {
+.menu .item {
     text-align: center;
     font-size: 18px;
 }
 
-.item > div:first-of-type {
+.menu .item > div:first-of-type {
     font-weight: bold;
 }
 
-.item > div:nth-of-type(2) {
+.menu .item > div:nth-of-type(2) {
     margin-top: 5px;
 }

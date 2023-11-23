@@ -1,5 +1,5 @@
 // Functions
-import { createImg, createDiv, createClassDivAndAppend } from "./function";
+import { createImg, createText, createClassDivAndAppend } from "./function";
 
 // Images
 import imageGitHub from '../images/github-mark-white.png';
@@ -29,7 +29,7 @@ const headerFooter = (() => {
     }
 
     function createFooter() {
-        const div1 = createDiv("Inspired by ");
+        const div1 = createText("Inspired by ");
         const a1 = createAnchor("https://jbjsoulkitchen.org/", "JBJ Soul Kitchen");
         div1.append(a1);
 

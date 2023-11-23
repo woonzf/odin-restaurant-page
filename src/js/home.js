@@ -1,5 +1,5 @@
 // Functions
-import { createImg, createDiv, createClassDivAndAppend } from './function';
+import { createImg, createText, createClassDivAndAppend } from './function';
 
 // Images
 import imgWelcome from '../images/pexels-igor-starkov-914388.jpg';
@@ -15,15 +15,15 @@ const home = (() => {
 
     function createWelcome() {
         const image = createImg(imgWelcome, "Restaurant Table and Chairs");
-        const div1 = createDiv("Welcome to Soul Kitchen");
-        const div21 = createDiv("Founded in 2003 by Mr John Von Jobi.");
+        const div1 = createText("Welcome to Soul Kitchen");
+        const div21 = createText("Founded in 2003 by Mr John Von Jobi.");
         
-        const div22 = createDiv("Its name took inspiration from the quote");
+        const div22 = createText("Its name took inspiration from the quote");
         const span22 = createSpan(` "food for the soul".`);
         div22.append(span22);
 
-        const div23 = createDiv("We strive to provide healthy and authentic food for you.");
-        const div24 = createDiv("Always.");
+        const div23 = createText("We strive to provide healthy and authentic food for you.");
+        const div24 = createText("Always.");
 
         const div2 = createClassDivAndAppend(null, div21, div22, div23, div24);
         const intro = createClassDivAndAppend("intro", div1, div2);
@@ -36,15 +36,15 @@ const home = (() => {
         const image3 = createImg(imgFood3, "Close-up Photo of a Burrito");
 
         const div1 = createClassDivAndAppend(null, image1, image2, image3);
-        const div2 = createDiv("... and more!");
-        const div3 = createDiv("We update our menu monthly!");
+        const div2 = createText("... and more!");
+        const div3 = createText("We update our menu monthly!");
         return createClassDivAndAppend("food", div1, div2, div3);
     }
 
     function createNewsletter() {
         const image = createImg(imgNewsletter, "Man Holding Mug in Front of Laptop");
-        const div1 = createDiv("Interested?");
-        const div2 = createDiv("Sign up for our newsletter today!");
+        const div1 = createText("Interested?");
+        const div2 = createText("Sign up for our newsletter today!");
 
         // Email input
         const email = document.createElement("input");

@@ -1,0 +1,32 @@
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact > img:first-of-type {
+    height: 40vw;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact .item {
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact .item > img {
+    height: 32px;
+}
+
+.contact .list {
+    display: flex;
+    flex-direction: column;
+}

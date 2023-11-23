@@ -5,7 +5,7 @@ function createImg(src, alt) {
     return img;
 }
 
-function createDiv(text) {
+function createText(text) {
     const div = document.createElement("div");
     div.textContent = text;
     return div;
@@ -18,4 +18,4 @@ function createClassDivAndAppend(className, ...elements) {
     return div;
 }
 
-export { createImg, createDiv, createClassDivAndAppend };
+export { createImg, createText, createClassDivAndAppend };
