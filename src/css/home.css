@@ -1,16 +1,14 @@
 /* WELCOME AND NEWSLETTER*/
 .welcome,
 .newsletter {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
     gap: 50px;
 }
 
-.welcome img,
-.newsletter img {
-    width: 80%;
-    justify-self: flex-end;
+/* WELCOME */
+.welcome img {
+    height: calc(30vw + 10vh);
 }
 
 /* INTRO AND NEWSLETTER */
@@ -59,12 +57,16 @@
 }
 
 .food img {
-    height: 15vw;
+    height: calc(10vw + 5vh);
 }
 
 /* NEWSLETTER */
-.newsletter > div:last-of-type {
-    width: 80%;
+.newsletter img {
+    height: calc(10vw + 10vh);
+}
+
+.newsletter > div {
+    width: 30vw;
 }
 
 .newsletter > div > div:nth-of-type(2),
@@ -128,15 +130,16 @@
 }
 
 #email + span::before {
+    width: 100%;
     font-size: 1.2rem;
 
     position: absolute;
     top: calc(-20px - 1.2rem);
-    left: calc(100% - 2rem);
+    left: calc(100% + 0.7rem);
 }
 
 .invalid + span::before {
-    content: "✖";
+    content: "✖ Invalid";
     color: red;
 }
 
