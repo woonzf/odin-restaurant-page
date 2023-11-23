@@ -2,8 +2,18 @@
 import { createDiv, createClassDivAndAppend } from "./function";
 
 const menu = (() => {
+    const month = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
+
     function createContent() {
-        return [createAppetizer(), createMainCourse(), createDessert()];
+        return [createMonth(), createAppetizer(), createMainCourse(), createDessert()];
+    }
+
+    function createMonth() {
+        const date = new Date();
+        const monthYear = createDiv(`${month[date.getMonth()]} ${date.getFullYear()}`);
+        monthYear.classList.add("month-year");
+        return monthYear;
     }
 
     function createAppetizer() {

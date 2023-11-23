@@ -37,7 +37,7 @@ const home = (() => {
 
         const div1 = createClassDivAndAppend(null, image1, image2, image3);
         const div2 = createDiv("... and more!");
-        const div3 = createDiv("We serve different kinds of food!");
+        const div3 = createDiv("We update our menu monthly!");
         return createClassDivAndAppend("food", div1, div2, div3);
     }
 

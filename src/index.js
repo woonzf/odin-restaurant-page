@@ -34,16 +34,19 @@ const page = (() => {
     function renderHome() {
         clearContent();
         render(home.createContent());
+        scrollToTop();
     }
 
     function renderMenu() {
         clearContent();
         render(menu.createContent());
+        scrollToTop();
     }
 
     function renderContact() {
         clearContent();
         console.log("CONTACT")
+        scrollToTop();
     }
 
     function clearContent() {
@@ -52,6 +55,10 @@ const page = (() => {
 
     function render(list) {
         for (const item of list) content.append(item);
+    }
+
+    function scrollToTop() {
+        window.scrollTo(0, 0);
     }
 
     return { init };

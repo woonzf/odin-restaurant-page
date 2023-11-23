@@ -1,3 +1,12 @@
+.month-year,
+.title {
+    font-family: "Permanent Marker";
+}
+
+.month-year {
+    font-size: 36px;
+}
+
 .menu {
     box-sizing: border-box;
     background-color: var(--color-food);
@@ -10,12 +19,11 @@
 }
 
 .title {
-    font-family: "Permanent Marker";
     font-size: 24px;
 }
 
 .divider {
-    width: 5rem;
+    width: 80px;
     border-bottom: 2px solid black;
 }
 
