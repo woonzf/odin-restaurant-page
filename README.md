@@ -1,7 +1,7 @@
 # Soul Kitchen
-### Live Demo: url
+### Live Demo: https://woonzf.github.io/odin-restaurant-page/
 ### Description:
-- A restaurant page with 3 pages: HOME, MENU and CONTACT
+- A restaurant page with 3 tabs: HOME, MENU and CONTACT
 - Inspired by JBJ Soul Kitchen
 - Created as a project of The Odin Project's Javascript Course
 
