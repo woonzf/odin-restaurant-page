@@ -5,7 +5,7 @@
 }
 
 .contact > img:first-of-type {
-    height: 30vw;
+    height: calc(20vw + 10vh);
 }
 
 .info {

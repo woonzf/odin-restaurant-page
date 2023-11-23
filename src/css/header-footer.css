@@ -41,7 +41,7 @@
 .footer {
     font-size: calc(var(--height-header) * 0.2);
     justify-content: center;
-    gap: 200px;
+    gap: 50px;
 }
 
 .footer a:hover {
