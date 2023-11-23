@@ -5,7 +5,7 @@
 }
 
 .contact > img:first-of-type {
-    height: 40vw;
+    height: 30vw;
 }
 
 .info {
@@ -15,8 +15,6 @@
 }
 
 .contact .item {
-    font-size: 18px;
-
     display: flex;
     align-items: center;
     gap: 20px;

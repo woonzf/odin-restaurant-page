@@ -12,11 +12,6 @@
 }
 
 /* INTRO AND NEWSLETTER */
-.intro,
-.newsletter {
-    font-size: 24px;
-}
-
 .intro > div:first-of-type,
 .newsletter > div > div:first-of-type {
     font-family: "Permanent Marker";
@@ -36,6 +31,7 @@
 .intro > div > div:last-of-type {
     margin-top: 10px;
     font-style: italic;
+    font-size: 24px;
 }
 
 /* FOOD */
@@ -53,10 +49,6 @@
 .food > div:first-of-type {
     display: flex;
     gap: 20px;
-}
-
-.food > div:nth-of-type(2) {
-    font-size: 18px;
 }
 
 .food > div:last-of-type {

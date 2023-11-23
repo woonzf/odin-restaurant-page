@@ -43,10 +43,15 @@ img {
 #content {
     background-color: var(--color-main);
     font-family: "Raleway";
+    font-size: 18px;
+
+    box-sizing: border-box;
+    min-height: calc(100vh - var(--height-header) * 2);
     padding: 50px 100px;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 50px;
 }
