@@ -24,11 +24,6 @@
     width: calc((var(--width-section) - var(--gap-section)) * 0.4);
 }
 
-/* .welcome .intro,
-.newsletter > div {
-    width: calc((var(--width-section) - var(--gap-section)) * 0.6);
-} */
-
 /* INTRO AND NEWSLETTER */
 .intro > div:first-of-type,
 .newsletter > div > div:first-of-type {
