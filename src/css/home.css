@@ -1,14 +1,32 @@
+/* GENERAL */
+:root {
+    --width-section: 60vw;
+    --gap-section: 50px;
+}
+
+.welcome,
+.food,
+.newsletter {
+    width: var(--width-section);
+}
+
 /* WELCOME AND NEWSLETTER*/
 .welcome,
 .newsletter {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: var(--gap-section);
 }
 
-/* WELCOME */
-.welcome img {
-    height: calc(30vw + 10vh);
+.welcome img,
+.newsletter img {
+    width: calc((var(--width-section) - var(--gap-section)) * 0.4);
+}
+
+.welcome .intro,
+.newsletter > div {
+    width: calc((var(--width-section) - var(--gap-section)) * 0.6);
+    flex: 1;
 }
 
 /* INTRO AND NEWSLETTER */
@@ -38,8 +56,7 @@
 /* FOOD */
 .food {
     background-color: var(--color-food);
-    width: 100%;
-    padding: 20px 100px;
+    padding: 20px calc((100vw - var(--width-section)) * 0.5);
 
     display: flex;
     flex-direction: column;
@@ -57,18 +74,10 @@
 }
 
 .food img {
-    height: calc(10vw + 5vh);
+    height: 15vw;
 }
 
 /* NEWSLETTER */
-.newsletter img {
-    height: calc(10vw + 10vh);
-}
-
-.newsletter > div {
-    width: 30vw;
-}
-
 .newsletter > div > div:nth-of-type(2),
 .newsletter form {
     margin-top: 20px;
@@ -130,16 +139,15 @@
 }
 
 #email + span::before {
-    width: 100%;
     font-size: 1.2rem;
 
     position: absolute;
     top: calc(-20px - 1.2rem);
-    left: calc(100% + 0.7rem);
+    left: calc(100% - 2rem);
 }
 
 .invalid + span::before {
-    content: "✖ Invalid";
+    content: "✖";
     color: red;
 }
 

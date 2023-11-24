@@ -1,11 +1,14 @@
 .contact {
+    width: 60vw;
+
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
 .contact > img:first-of-type {
-    height: calc(20vw + 10vh);
+    height: 30vw;
 }
 
 .info {
