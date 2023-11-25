@@ -4,15 +4,11 @@
     --gap-section: 50px;
 }
 
-.welcome,
-.food,
-.newsletter {
-    width: var(--width-section);
-}
-
 /* WELCOME AND NEWSLETTER*/
 .welcome,
 .newsletter {
+    width: var(--width-section);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +47,8 @@
 /* FOOD */
 .food {
     background-color: var(--color-food);
-    padding: 20px calc((100vw - var(--width-section)) * 0.5);
+    width: 100%;
+    padding: 20px 0;
 
     display: flex;
     flex-direction: column;
